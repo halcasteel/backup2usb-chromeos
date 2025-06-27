@@ -1,0 +1,920 @@
+{
+  "directories": [
+    {
+      "name": "workflows",
+      "path": "/home/halcasteel/workflows",
+      "size": 37341711,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "web-scraper-latest",
+      "path": "/home/halcasteel/web-scraper-latest",
+      "size": 789310,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "waveterm",
+      "path": "/home/halcasteel/waveterm",
+      "size": 258781681,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "terminal-working-backup-20250604-064129",
+      "path": "/home/halcasteel/terminal-working-backup-20250604-064129",
+      "size": 83269,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "n8n-workflows",
+      "path": "/home/halcasteel/n8n-workflows",
+      "size": 5729898,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "images",
+      "path": "/home/halcasteel/images",
+      "size": 1567778,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "google",
+      "path": "/home/halcasteel/google",
+      "size": 1467984135,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "go",
+      "path": "/home/halcasteel/go",
+      "size": 551863493,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "frontend",
+      "path": "/home/halcasteel/frontend",
+      "size": 1448,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "formatGDOCS",
+      "path": "/home/halcasteel/formatGDOCS",
+      "size": 27361,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "formatGDOC",
+      "path": "/home/halcasteel/formatGDOC",
+      "size": 80699,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "chromeos",
+      "path": "/home/halcasteel/chromeos",
+      "size": 27141,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "az1.ai_LOGO",
+      "path": "/home/halcasteel/az1.ai_LOGO",
+      "size": 13085653,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "az1-website-001",
+      "path": "/home/halcasteel/az1-website-001",
+      "size": 493467685,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "academic-scraper",
+      "path": "/home/halcasteel/academic-scraper",
+      "size": 7972660010,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "_archive-old-app",
+      "path": "/home/halcasteel/_archive-old-app",
+      "size": 24203443,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "WEBSITE4",
+      "path": "/home/halcasteel/WEBSITE4",
+      "size": 954,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "WEB-SCRAPER-LATEST",
+      "path": "/home/halcasteel/WEB-SCRAPER-LATEST",
+      "size": 1043598511,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "WEATHER-API-APP",
+      "path": "/home/halcasteel/WEATHER-API-APP",
+      "size": 572724980,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Tom_Killion",
+      "path": "/home/halcasteel/Tom_Killion",
+      "size": 42302787,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TESTS",
+      "path": "/home/halcasteel/TESTS",
+      "size": 417206,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TEST-MARKDOWN-URL-EXTRACTION",
+      "path": "/home/halcasteel/TEST-MARKDOWN-URL-EXTRACTION",
+      "size": 471196,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TEST",
+      "path": "/home/halcasteel/TEST",
+      "size": 727648,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TERMINAL-DOCKER",
+      "path": "/home/halcasteel/TERMINAL-DOCKER",
+      "size": 405787556,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TELLER-RESEARCH",
+      "path": "/home/halcasteel/TELLER-RESEARCH",
+      "size": 923902,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TELLER-NEW",
+      "path": "/home/halcasteel/TELLER-NEW",
+      "size": 8845191,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "TELLER",
+      "path": "/home/halcasteel/TELLER",
+      "size": 32562685,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Sumaya-Casteel-RESUME",
+      "path": "/home/halcasteel/Sumaya-Casteel-RESUME",
+      "size": 11924,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "SVB",
+      "path": "/home/halcasteel/SVB",
+      "size": 3944683,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "STORAGE",
+      "path": "/home/halcasteel/STORAGE",
+      "size": 135062,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "SEARCH",
+      "path": "/home/halcasteel/SEARCH",
+      "size": 6361,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "SCREENSHOTS",
+      "path": "/home/halcasteel/SCREENSHOTS",
+      "size": 0,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "SCRAPER-NEW",
+      "path": "/home/halcasteel/SCRAPER-NEW",
+      "size": 40505,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "RUST-ACTIX-MIGRATION",
+      "path": "/home/halcasteel/RUST-ACTIX-MIGRATION",
+      "size": 8046192107,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "ROBLOX",
+      "path": "/home/halcasteel/ROBLOX",
+      "size": 46027,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "RESEARCH",
+      "path": "/home/halcasteel/RESEARCH",
+      "size": 4401498,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "PROMPTS",
+      "path": "/home/halcasteel/PROMPTS",
+      "size": 56587,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "PROFILE",
+      "path": "/home/halcasteel/PROFILE",
+      "size": 4595,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "PRFAQ",
+      "path": "/home/halcasteel/PRFAQ",
+      "size": 13975071,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "POSTGRESQL-KNOWLEDGE-GRAPH-DATABASE",
+      "path": "/home/halcasteel/POSTGRESQL-KNOWLEDGE-GRAPH-DATABASE",
+      "size": 92853,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "PARA-HELP-PROMPT-DESIGN",
+      "path": "/home/halcasteel/PARA-HELP-PROMPT-DESIGN",
+      "size": 236576,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "NVIDIA",
+      "path": "/home/halcasteel/NVIDIA",
+      "size": 24236,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "N8N-ANALYSIS",
+      "path": "/home/halcasteel/N8N-ANALYSIS",
+      "size": 9189424,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Multi-Agent-Orchestrator-Huggin",
+      "path": "/home/halcasteel/Multi-Agent-Orchestrator-Huggin",
+      "size": 34219170,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Markdown2Latex2PDF",
+      "path": "/home/halcasteel/Markdown2Latex2PDF",
+      "size": 113968207,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "MATIAS",
+      "path": "/home/halcasteel/MATIAS",
+      "size": 291429622,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "MARKDOW_GDRIVE",
+      "path": "/home/halcasteel/MARKDOW_GDRIVE",
+      "size": 0,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "MANAFOLD-SDK-from-ORIGINAL-ARTIFACT",
+      "path": "/home/halcasteel/MANAFOLD-SDK-from-ORIGINAL-ARTIFACT",
+      "size": 88710652,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "MANAFOLD-IMAGES",
+      "path": "/home/halcasteel/MANAFOLD-IMAGES",
+      "size": 614919,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "MANAFOLD",
+      "path": "/home/halcasteel/MANAFOLD",
+      "size": 457837112,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "LIFE-SCIENCE-COMPLIANCE-Gap-Analysis-FRAMEWORK-for-REGULATION-COMPLIANCE",
+      "path": "/home/halcasteel/LIFE-SCIENCE-COMPLIANCE-Gap-Analysis-FRAMEWORK-for-REGULATION-COMPLIANCE",
+      "size": 3297357,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Kubernetes-Helm",
+      "path": "/home/halcasteel/Kubernetes-Helm",
+      "size": 18618,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "KESTRA-N8N-WORKFLOW-CONVERSION-APPLICATION",
+      "path": "/home/halcasteel/KESTRA-N8N-WORKFLOW-CONVERSION-APPLICATION",
+      "size": 384730,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "JOB-SEARCH",
+      "path": "/home/halcasteel/JOB-SEARCH",
+      "size": 1416199,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "IVR",
+      "path": "/home/halcasteel/IVR",
+      "size": 10822027,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "ITIL",
+      "path": "/home/halcasteel/ITIL",
+      "size": 12532415,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "HalCasteel-RESUME",
+      "path": "/home/halcasteel/HalCasteel-RESUME",
+      "size": 150611,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "HAI",
+      "path": "/home/halcasteel/HAI",
+      "size": 292214,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "GOOGLE-CONTACT-CENTER-AGENTIC-AI-PARTNERS",
+      "path": "/home/halcasteel/GOOGLE-CONTACT-CENTER-AGENTIC-AI-PARTNERS",
+      "size": 40591,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "GLEAN-ENTERPRISE-SEARCH",
+      "path": "/home/halcasteel/GLEAN-ENTERPRISE-SEARCH",
+      "size": 136690,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "GIT",
+      "path": "/home/halcasteel/GIT",
+      "size": 4239888057,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "GCP-PROJECT-REPORTING",
+      "path": "/home/halcasteel/GCP-PROJECT-REPORTING",
+      "size": 438440,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Florida-Residential-Real-Estate-Purchase-Agreement",
+      "path": "/home/halcasteel/Florida-Residential-Real-Estate-Purchase-Agreement",
+      "size": 927348,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "FINANCE",
+      "path": "/home/halcasteel/FINANCE",
+      "size": 72697,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "EmmaKaplan",
+      "path": "/home/halcasteel/EmmaKaplan",
+      "size": 2004,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Downloads",
+      "path": "/home/halcasteel/Downloads",
+      "size": 219238980,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Documents",
+      "path": "/home/halcasteel/Documents",
+      "size": 0,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "DRONE-SHOTS",
+      "path": "/home/halcasteel/DRONE-SHOTS",
+      "size": 24198120,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "DIGITAL-CURRENCY",
+      "path": "/home/halcasteel/DIGITAL-CURRENCY",
+      "size": 9235461,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CSV-BIO-ENGINEERING-BIO-MANUFACTURING-OUTLINE",
+      "path": "/home/halcasteel/CSV-BIO-ENGINEERING-BIO-MANUFACTURING-OUTLINE",
+      "size": 6381,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CODITECT.AI",
+      "path": "/home/halcasteel/CODITECT.AI",
+      "size": 640348934,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDIA-ANALYSIS",
+      "path": "/home/halcasteel/CLAUDIA-ANALYSIS",
+      "size": 5999768118,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE_DEVELOPMENT_FRAMEWORK",
+      "path": "/home/halcasteel/CLAUDE_DEVELOPMENT_FRAMEWORK",
+      "size": 48312,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE-LOGS",
+      "path": "/home/halcasteel/CLAUDE-LOGS",
+      "size": 32780107,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE-ERRORS",
+      "path": "/home/halcasteel/CLAUDE-ERRORS",
+      "size": 19299,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE-CORE_MASTER-PROMPTS",
+      "path": "/home/halcasteel/CLAUDE-CORE_MASTER-PROMPTS",
+      "size": 224,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE-CODE-CORE-MASTER-PROMPTS-INITIAL-BUILD",
+      "path": "/home/halcasteel/CLAUDE-CODE-CORE-MASTER-PROMPTS-INITIAL-BUILD",
+      "size": 5573273,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "CLAUDE-CODE-CORE-MASTER-PROMPTS",
+      "path": "/home/halcasteel/CLAUDE-CODE-CORE-MASTER-PROMPTS",
+      "size": 41385864,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "Baldwin-Realty",
+      "path": "/home/halcasteel/Baldwin-Realty",
+      "size": 1325072,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "BU",
+      "path": "/home/halcasteel/BU",
+      "size": 27645866,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "BOOKMARKS",
+      "path": "/home/halcasteel/BOOKMARKS",
+      "size": 12499345763,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "BIO-MANUFACTURING-OUTLINE-CSV",
+      "path": "/home/halcasteel/BIO-MANUFACTURING-OUTLINE-CSV",
+      "size": 8009,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AZ1.AI_REFACTOR-ANALYSIS",
+      "path": "/home/halcasteel/AZ1.AI_REFACTOR-ANALYSIS",
+      "size": 1305486,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AZ1.AI_MASTER_PROJECT_PROMPT",
+      "path": "/home/halcasteel/AZ1.AI_MASTER_PROJECT_PROMPT",
+      "size": 112997,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AZ1.AI-LOGO",
+      "path": "/home/halcasteel/AZ1.AI-LOGO",
+      "size": 80303,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AZ1-AI_AI-CODING-FRAMEWORK",
+      "path": "/home/halcasteel/AZ1-AI_AI-CODING-FRAMEWORK",
+      "size": 2993306,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AZ1-AI-CODE-AUTOMATION-FRAMEWORK-V1.0",
+      "path": "/home/halcasteel/AZ1-AI-CODE-AUTOMATION-FRAMEWORK-V1.0",
+      "size": 519738,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "ARTEM-ARAKCHEEV",
+      "path": "/home/halcasteel/ARTEM-ARAKCHEEV",
+      "size": 6928,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AI-MARKET-RESEARCH",
+      "path": "/home/halcasteel/AI-MARKET-RESEARCH",
+      "size": 3944279,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AGENT_SPEC",
+      "path": "/home/halcasteel/AGENT_SPEC",
+      "size": 3583997,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AGENTS",
+      "path": "/home/halcasteel/AGENTS",
+      "size": 1233696,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "AB-TEST",
+      "path": "/home/halcasteel/AB-TEST",
+      "size": 46815,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "A2A-MultiAgent",
+      "path": "/home/halcasteel/A2A-MultiAgent",
+      "size": 3054933600,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "4P-Multi-Agent-Agentic-System",
+      "path": "/home/halcasteel/4P-Multi-Agent-Agentic-System",
+      "size": 856065,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "2025-02-20",
+      "path": "/home/halcasteel/2025-02-20",
+      "size": 32678805355,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "0000-MULTI-AGENT-AGENTIC-SYSTEM-A2A",
+      "path": "/home/halcasteel/0000-MULTI-AGENT-AGENTIC-SYSTEM-A2A",
+      "size": 64579,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "0000-BU",
+      "path": "/home/halcasteel/0000-BU",
+      "size": 371186066,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": "000-CORE",
+      "path": "/home/halcasteel/000-CORE",
+      "size": 427031977,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": ".ssh",
+      "path": "/home/halcasteel/.ssh",
+      "size": 2445,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": ".config",
+      "path": "/home/halcasteel/.config",
+      "size": 7842222129,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    },
+    {
+      "name": ".gnupg",
+      "path": "/home/halcasteel/.gnupg",
+      "size": 14083,
+      "status": "pending",
+      "progress": 0,
+      "filesProcessed": 0,
+      "sizeCopied": 0
+    }
+  ],
+  "currentIndex": 0,
+  "totalSize": 90161486147,
+  "completedSize": 0,
+  "startTime": null,
+  "errors": [],
+  "state": "stopped",
+  "currentDir": null
+}
