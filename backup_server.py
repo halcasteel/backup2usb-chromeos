@@ -11,6 +11,7 @@ import sys
 
 BACKUP_STATUS_FILE = "backup_status.json"
 BACKUP_LIST_FILE = "backup_directories.txt"
+BACKUP_HISTORY_FILE = "backup_history.json"
 BACKUP_DEST = "/mnt/chromeos/removable/PNYRP60PSSD/pixelbook_backup_" + time.strftime("%Y%m%d")
 PORT = 8888
 
@@ -32,13 +33,79 @@ class BackupManager:
             "dryRun": False,  # Dry run mode
             "destinations": [BACKUP_DEST],  # Support multiple destinations
             "schedule": None,  # Backup schedule
-            "history": []  # Backup history
+            "history": self.load_history()  # Backup history
         }
         self.backup_process = None
         self.lock = threading.Lock()
         self.log_buffer = []  # Buffer for log entries
         self.max_logs = 1000  # Maximum number of log entries to keep
         self.load_directories()
+    
+    def load_profiles(self):
+        """Load backup profiles from file"""
+        try:
+            with open('profiles.json', 'r') as f:
+                data = json.load(f)
+                return data.get('profiles', {})
+        except FileNotFoundError:
+            # Return default profiles if file doesn't exist
+            return {
+                "development": {
+                    "name": "Development",
+                    "directories": ["Documents", "Downloads", "projects", "code", "scripts", ".config", ".ssh"]
+                },
+                "full": {
+                    "name": "Full Backup",
+                    "directories": []
+                }
+            }
+        except Exception as e:
+            print(f"Error loading profiles: {e}")
+            return {}
+    
+    def load_history(self):
+        """Load backup history from file"""
+        try:
+            with open(BACKUP_HISTORY_FILE, 'r') as f:
+                data = json.load(f)
+                return data.get('history', [])
+        except FileNotFoundError:
+            return []
+        except Exception as e:
+            print(f"Error loading history: {e}")
+            return []
+    
+    def save_history(self):
+        """Save backup history to file"""
+        try:
+            with open(BACKUP_HISTORY_FILE, 'w') as f:
+                json.dump({'history': self.status['history']}, f, indent=2)
+        except Exception as e:
+            print(f"Error saving history: {e}")
+    
+    def add_history_entry(self):
+        """Add a backup session to history"""
+        if self.status["startTime"]:
+            completed_dirs = [d for d in self.status["directories"] if d["status"] == "completed"]
+            total_files = sum(d.get("fileCount", 0) for d in completed_dirs)
+            
+            history_entry = {
+                "date": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(self.status["startTime"] / 1000)),
+                "profile": self.status.get("activeProfile", "Custom"),
+                "status": "Completed" if self.status["state"] == "stopped" else "Interrupted",
+                "duration": time.time() - (self.status["startTime"] / 1000),
+                "size": self.status["completedSize"],
+                "fileCount": total_files,
+                "directoriesCompleted": len(completed_dirs),
+                "totalDirectories": len([d for d in self.status["directories"] if d.get("selected", True)]),
+                "errors": len(self.status["errors"]),
+                "dryRun": self.status.get("dryRun", False)
+            }
+            
+            self.status["history"].insert(0, history_entry)
+            # Keep only last 50 history entries
+            self.status["history"] = self.status["history"][:50]
+            self.save_history()
         
     def load_directories(self):
         """Load and sort directories from home folder"""
@@ -166,6 +233,22 @@ class BackupManager:
         except:
             return 0
     
+    def extract_file_count(self, stats_text):
+        """Extract file count from rsync stats output"""
+        import re
+        try:
+            # Look for "Number of files: X" or "Number of regular files transferred: X"
+            match = re.search(r'Number of (?:regular )?files(?: transferred)?: (\d+)', stats_text)
+            if match:
+                return int(match.group(1))
+            # Alternative pattern
+            match = re.search(r'(\d+) files transferred', stats_text)
+            if match:
+                return int(match.group(1))
+        except:
+            pass
+        return None
+    
     def start_backup(self):
         """Start or resume backup process"""
         if self.status["state"] == "running":
@@ -238,7 +321,8 @@ class BackupManager:
                 '--exclude=.git/objects', '--exclude=dist', '--exclude=build',
                 '--exclude=.next', '--exclude=.cache', '--exclude=*.log',
                 '--exclude=*.tmp', '--exclude=*.swp',
-                '--info=progress2'
+                '--info=progress2',
+                '--stats'  # Add stats to get file counts
             ]
             
             # Add dry-run flag if enabled
@@ -299,7 +383,19 @@ class BackupManager:
                         except:
                             pass
                 
+                # Collect remaining output to parse stats
+                remaining_output = []
+                for line in self.backup_process.stdout:
+                    self.add_log(line.strip(), dir_info["name"])
+                    remaining_output.append(line)
+                
                 self.backup_process.wait()
+                
+                # Parse stats from output
+                stats_text = '\n'.join(remaining_output)
+                file_count = self.extract_file_count(stats_text)
+                if file_count:
+                    dir_info["fileCount"] = file_count
                 
                 if self.backup_process.returncode == 0:
                     dir_info["status"] = "completed"
@@ -317,6 +413,7 @@ class BackupManager:
         
         self.status["state"] = "stopped"
         self.status["currentDir"] = None
+        self.add_history_entry()  # Save to history when backup completes
         self.save_status()
     
     def pause_backup(self):
@@ -332,6 +429,7 @@ class BackupManager:
         if self.backup_process:
             self.backup_process.terminate()
         self.status["currentIndex"] = 0
+        self.add_history_entry()  # Save to history when manually stopped
         self.save_status()
 
 class BackupHTTPHandler(SimpleHTTPRequestHandler):
@@ -452,8 +550,65 @@ class BackupHTTPHandler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps({"status": "ok"}).encode())
             
+        elif self.path == '/api/schedule':
+            content_length = int(self.headers['Content-Length'])
+            post_data = self.rfile.read(content_length)
+            data = json.loads(post_data)
+            
+            # Save schedule configuration
+            with backup_manager.lock:
+                backup_manager.status['schedule'] = {
+                    'type': data.get('type', 'daily'),
+                    'time': data.get('time', '02:00'),
+                    'profile': data.get('profile', 'full'),
+                    'enabled': True,
+                    'lastRun': None,
+                    'nextRun': self.calculate_next_run(data.get('type', 'daily'), data.get('time', '02:00'))
+                }
+                backup_manager.save_status()
+                
+                # Create cron job if needed
+                self.setup_cron_job(backup_manager.status['schedule'])
+            
+            self.send_response(200)
+            self.send_header('Content-type', 'application/json')
+            self.end_headers()
+            self.wfile.write(json.dumps({"status": "ok"}).encode())
+            
         else:
             self.send_error(404)
+    
+    def calculate_next_run(self, schedule_type, time_str):
+        """Calculate next run time based on schedule"""
+        import datetime
+        now = datetime.datetime.now()
+        hour, minute = map(int, time_str.split(':'))
+        
+        if schedule_type == 'daily':
+            next_run = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            if next_run <= now:
+                next_run += datetime.timedelta(days=1)
+        elif schedule_type == 'weekly':
+            next_run = now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+            days_ahead = 7 - now.weekday()  # Next Monday
+            if days_ahead == 0 and next_run <= now:
+                days_ahead = 7
+            next_run += datetime.timedelta(days=days_ahead)
+        else:  # monthly
+            next_run = now.replace(day=1, hour=hour, minute=minute, second=0, microsecond=0)
+            if next_run <= now:
+                if now.month == 12:
+                    next_run = next_run.replace(year=now.year + 1, month=1)
+                else:
+                    next_run = next_run.replace(month=now.month + 1)
+        
+        return next_run.isoformat()
+    
+    def setup_cron_job(self, schedule):
+        """Setup cron job for scheduled backups"""
+        # This would need to be implemented based on the system's cron capabilities
+        # For now, just log the intent
+        print(f"Schedule configured: {schedule['type']} at {schedule['time']} using profile {schedule['profile']}")
     
     def log_message(self, format, *args):
         pass  # Suppress request logging

@@ -485,10 +485,6 @@
                         <label>Profile:</label>
                         <select id="profileSelect" onchange="selectProfile(this.value)">
                             <option value="">Custom</option>
-                            <option value="development">Development</option>
-                            <option value="documents">Documents</option>
-                            <option value="media">Media</option>
-                            <option value="full">Full Backup</option>
                         </select>
                         <label style="margin-left: 20px;">
                             <input type="checkbox" id="dryRunCheckbox" onchange="toggleDryRun(this.checked)">
@@ -676,6 +672,9 @@
             document.getElementById('completed').textContent = statusData.directories.filter(d => d.status === 'completed').length;
             document.getElementById('totalSize').textContent = formatSize(statusData.totalSize);
             
+            // Update profile selector
+            updateProfileSelector();
+            
             // Calculate speed and ETA
             if (statusData.startTime && statusData.completedSize > 0) {
                 const elapsed = (Date.now() - statusData.startTime) / 1000;
@@ -761,6 +760,26 @@
                     </div>
                 </div>
             `}).join('');
+        }
+
+        function updateProfileSelector() {
+            const select = document.getElementById('profileSelect');
+            const currentValue = select.value;
+            
+            // Only update if profiles have changed
+            if (statusData.profiles && Object.keys(statusData.profiles).length > 0) {
+                const profilesHtml = ['<option value="">Custom</option>'];
+                for (const [key, profile] of Object.entries(statusData.profiles)) {
+                    profilesHtml.push(`<option value="${key}">${profile.name}</option>`);
+                }
+                
+                // Only update if content has changed
+                const newHtml = profilesHtml.join('');
+                if (select.innerHTML !== newHtml) {
+                    select.innerHTML = newHtml;
+                    select.value = currentValue; // Restore selection
+                }
+            }
         }
 
         function updatePieChart(progress) {

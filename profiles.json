@@ -1,0 +1,56 @@
+{
+  "profiles": {
+    "development": {
+      "name": "Development",
+      "description": "Code projects, configurations, and development tools",
+      "directories": [
+        "Documents",
+        "Downloads",
+        "projects",
+        "code",
+        "scripts",
+        ".config",
+        ".ssh",
+        ".gnupg",
+        "src",
+        "workspace"
+      ]
+    },
+    "documents": {
+      "name": "Documents",
+      "description": "Personal documents and media files",
+      "directories": [
+        "Documents",
+        "Downloads",
+        "Pictures",
+        "Videos",
+        "Desktop"
+      ]
+    },
+    "media": {
+      "name": "Media",
+      "description": "Photos, videos, and music",
+      "directories": [
+        "Pictures",
+        "Videos",
+        "Music",
+        "Downloads",
+        "Movies"
+      ]
+    },
+    "minimal": {
+      "name": "Minimal",
+      "description": "Essential files only",
+      "directories": [
+        "Documents",
+        ".ssh",
+        ".gnupg"
+      ]
+    },
+    "full": {
+      "name": "Full Backup",
+      "description": "All non-hidden directories",
+      "directories": []
+    }
+  }
+}
