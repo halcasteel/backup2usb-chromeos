@@ -1,9 +1,0 @@
-/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/libserde_path_to_error-73548156354d72c1.rmeta: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/de.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/path.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/ser.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/wrap.rs
-
-/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/serde_path_to_error-73548156354d72c1.d: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/de.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/path.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/ser.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/wrap.rs
-
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/lib.rs:
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/de.rs:
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/path.rs:
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/ser.rs:
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_path_to_error-0.1.17/src/wrap.rs:

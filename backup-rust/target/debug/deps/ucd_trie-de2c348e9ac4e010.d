@@ -1,6 +1,0 @@
-/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/libucd_trie-de2c348e9ac4e010.rmeta: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/owned.rs
-
-/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/ucd_trie-de2c348e9ac4e010.d: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/owned.rs
-
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/lib.rs:
-/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/ucd-trie-0.1.7/src/owned.rs:

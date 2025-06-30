@@ -1,2 +1,0 @@
-fn(axum::extract::State<BackupManager>) -> impl futures::Future<Output = axum::Json<StatusResponse>> {get_status}
-fn(axum::extract::State<BackupManager>) -> impl futures::Future<Output = axum::Json<StatusResponse>> {get_status}: Handler<_, _>

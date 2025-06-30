@@ -27,6 +27,7 @@ backup_directories.txt
 # Logs
 *.log
 logs/
+LOG-DOWNLOADS/
 
 # Temporary files
 *.tmp
@@ -36,3 +37,32 @@ logs/
 # Test files
 test_*
 *_test.py
+
+# Frontend build artifacts and dependencies
+backup-frontend/node_modules/
+backup-frontend/dist/
+backup-frontend/.vite/
+backup-frontend/package-lock.json
+backup-frontend/yarn.lock
+
+# Rust build artifacts
+backup-rust/target/
+backup-rust/Cargo.lock
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Screenshots and media
+SCREENSHOTS/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Archives and compressed files
+*.zip
+*.tar
+*.tar.gz
+*.rar
