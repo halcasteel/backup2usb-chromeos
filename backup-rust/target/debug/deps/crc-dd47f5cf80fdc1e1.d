@@ -1,0 +1,12 @@
+/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/libcrc-dd47f5cf80fdc1e1.rmeta: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs
+
+/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/crc-dd47f5cf80fdc1e1.d: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs
+
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/lib.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc128.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc16.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc32.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc64.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/crc8.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/table.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crc-3.3.0/src/util.rs:

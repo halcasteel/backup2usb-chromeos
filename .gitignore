@@ -26,6 +26,7 @@ backup_directories.txt
 
 # Logs
 *.log
+logs/
 
 # Temporary files
 *.tmp

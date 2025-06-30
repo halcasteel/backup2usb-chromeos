@@ -1,0 +1,11 @@
+/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/libnotify-831dd475cf31988c.rmeta: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/inotify.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/event.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/null.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/poll.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/config.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/error.rs
+
+/home/halcasteel/BACKUP-RSYNC/backup-rust/target/debug/deps/notify-831dd475cf31988c.d: /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/lib.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/inotify.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/event.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/null.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/poll.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/config.rs /home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/error.rs
+
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/lib.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/inotify.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/event.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/null.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/poll.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/config.rs:
+/home/halcasteel/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/notify-6.1.1/src/error.rs:

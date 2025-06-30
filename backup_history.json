@@ -1,0 +1,28 @@
+{
+  "history": [
+    {
+      "date": "2025-06-27 21:11:27",
+      "profile": null,
+      "status": "Completed",
+      "duration": 299.88661217689514,
+      "size": 301923683,
+      "fileCount": 0,
+      "directoriesCompleted": 0,
+      "totalDirectories": 102,
+      "errors": 5,
+      "dryRun": false
+    },
+    {
+      "date": "2025-06-27 21:11:27",
+      "profile": null,
+      "status": "Completed",
+      "duration": 297.47292852401733,
+      "size": 301923683,
+      "fileCount": 0,
+      "directoriesCompleted": 0,
+      "totalDirectories": 102,
+      "errors": 4,
+      "dryRun": false
+    }
+  ]
+}

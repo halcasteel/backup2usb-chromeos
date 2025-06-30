@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=/home/halcasteel/BACKUP-RSYNC/backup-rust/target/release/build/mime_guess-add36a0d6b9adb02/out/mime_types_generated.rs

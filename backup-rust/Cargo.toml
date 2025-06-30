@@ -1,0 +1,98 @@
+[package]
+name = "backup-system"
+version = "3.0.0"
+edition = "2021"
+authors = ["Backup System Team"]
+description = "High-performance backup system with web interface"
+
+[dependencies]
+# Web framework - lightweight and fast
+axum = { version = "0.7", features = ["ws", "macros"] }
+tower = { version = "0.4", features = ["full"] }
+tower-http = { version = "0.5", features = ["fs", "cors", "trace"] }
+hyper = { version = "1.0", features = ["full"] }
+
+# Async runtime - efficient resource usage
+tokio = { version = "1.35", features = ["full"] }
+tokio-stream = { version = "0.1", features = ["fs"] }
+
+# Serialization - zero-copy where possible
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+bincode = "1.3"  # For efficient binary serialization
+
+# Database - embedded for simplicity
+sqlx = { version = "0.7", features = ["runtime-tokio-native-tls", "sqlite", "json", "time"] }
+
+# File operations - optimized
+walkdir = "2.4"
+notify = { version = "6.1", default-features = false, features = ["macos_kqueue"] }
+blake3 = "1.5"  # Fast hashing
+memmap2 = "0.9"  # Memory-mapped files for large file handling
+
+# Parallel processing - CPU efficient
+rayon = "1.8"
+num_cpus = "1.16"
+crossbeam-channel = "0.5"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Logging and tracing - minimal overhead
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Configuration
+config = "0.13"
+dotenvy = "0.15"
+
+# Utilities
+once_cell = "1.19"
+parking_lot = "0.12"  # Faster than std::sync::Mutex
+bytes = "1.5"
+futures = "0.3"
+pin-project-lite = "0.2"
+async-trait = "0.1"
+uuid = { version = "1.6", features = ["v4"] }
+dirs = "5.0"
+regex = "1.10"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+humantime = "2.1"
+
+# System info
+sysinfo = "0.30"
+libc = "0.2"
+
+# Compression (optional)
+flate2 = { version = "1.0", features = ["tokio"], optional = true }
+zstd = { version = "0.13", optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+proptest = "1.4"
+tempfile = "3.8"
+
+[features]
+default = ["compression"]
+compression = ["flate2", "zstd"]
+
+[profile.release]
+lto = "fat"  # Link-time optimization
+codegen-units = 1  # Better optimization
+strip = true  # Strip symbols
+opt-level = 3  # Maximum optimization
+panic = "abort"  # Smaller binary
+
+[profile.dev]
+opt-level = 1  # Some optimization in dev mode
+
+[[bin]]
+name = "backup-system"
+path = "src/main.rs"
+
+# [[bench]]
+# name = "file_operations"
+# harness = false

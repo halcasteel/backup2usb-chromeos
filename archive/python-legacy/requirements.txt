@@ -1,0 +1,23 @@
+# Backup System Requirements
+
+# Web server and API
+aiohttp>=3.8.0
+aiohttp-cors>=0.7.0
+
+# System monitoring
+psutil>=5.9.0
+
+# Data processing
+dataclasses-json>=0.5.0
+
+# Development and testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+black>=22.0.0
+flake8>=5.0.0
+
+# Optional: For encryption support
+# cryptography>=3.4.0
+
+# Optional: For compression support  
+# lz4>=4.0.0

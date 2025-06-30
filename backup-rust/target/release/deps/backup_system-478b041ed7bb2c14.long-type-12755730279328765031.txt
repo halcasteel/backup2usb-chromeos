@@ -1,0 +1,2 @@
+fn(axum::extract::State<BackupManager>, axum::Json<ControlRequest>) -> impl futures::Future<Output = axum::Json<JsonValue>> {control_backup}
+fn(axum::extract::State<BackupManager>, axum::Json<ControlRequest>) -> impl futures::Future<Output = axum::Json<JsonValue>> {control_backup}: Handler<_, _>

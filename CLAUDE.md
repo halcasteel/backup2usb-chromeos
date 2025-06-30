@@ -4,30 +4,33 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a backup management system that provides a web-based interface for backing up directories from a Linux/Chrome OS system to external storage. The system uses Python for the server backend and provides real-time progress monitoring through a web dashboard.
+This is a high-performance backup management system that provides a web-based interface for backing up directories from a Linux/Chrome OS system to external storage. The system uses a Rust backend for optimal performance and a React/TypeScript frontend for a modern user experience.
 
 ## Architecture
 
 ### Core Components
 
-1. **backup_server.py** - HTTP server that manages backup operations
-   - Runs on port 8888
+1. **Rust Backend (backup-rust/)** - High-performance backup server
+   - Runs on port 8888 with Axum web framework
+   - Multi-threaded with dynamic worker scaling based on system resources
    - Handles backup process lifecycle (start/pause/stop)
-   - Tracks progress by parsing rsync output
-   - Provides REST endpoints: `/status`, `/start`, `/pause`, `/stop`
-   - Automatically discovers directories in home folder
+   - Real-time rsync monitoring with metrics and verification
+   - REST API endpoints: `/api/status`, `/start`, `/pause`, `/stop`
+   - WebSocket endpoint: `/ws` for real-time updates
+   - SQLite database for state persistence
 
-2. **BACKUP-OPS-DASHBOARD.html** - Web interface for monitoring backups
-   - Real-time progress display with speed and ETA
-   - Directory list with status indicators
-   - Error logging display
-   - Dark theme UI
+2. **React Frontend (backup-frontend/)** - Modern web dashboard
+   - Real-time progress display with WebSocket updates
+   - Professional grey theme with Chakra UI components
+   - Directory selection with profiles and filtering
+   - Visual progress bars, circular progress, and speed graphs
+   - Tabbed interface: Backup, Logs, Schedule, History
 
-3. **backup_status.json** - Persistent state storage
-   - Tracks directory list sorted by name (descending)
-   - Progress for each directory
-   - Total size calculations
-   - Error logs
+3. **State Management**
+   - SQLite database for persistent storage
+   - Zero-copy message passing between workers
+   - Lock-free data structures for high performance
+   - Automatic state recovery on restart
 
 ### Key Technical Details
 
@@ -38,11 +41,45 @@ This is a backup management system that provides a web-based interface for backi
 
 ## Development Commands
 
-### Running the Server
+### Running the Rust Backend
 ```bash
-python3 backup_server.py
+cd backup-rust
+cargo run --release
 ```
 The server will start on http://localhost:8888
+
+### Running the React Frontend
+```bash
+cd backup-frontend
+npm run dev
+```
+The frontend will start on http://localhost:3000
+
+### Building for Production
+```bash
+# Backend
+cd backup-rust
+cargo build --release
+
+# Frontend
+cd backup-frontend
+npm run build
+```
+
+### Testing Server Endpoints
+```bash
+# Check status
+curl http://localhost:8888/api/status
+
+# Start backup
+curl -X POST http://localhost:8888/start
+
+# Pause backup
+curl -X POST http://localhost:8888/pause
+
+# Stop backup
+curl -X POST http://localhost:8888/stop
+```
 
 ### Manual Backup Script
 ```bash
@@ -50,29 +87,29 @@ The server will start on http://localhost:8888
 ```
 Note: Most directories are commented out by default. Edit the script to enable specific directories.
 
-### Testing Server Endpoints
-```bash
-# Check status
-curl http://localhost:8888/status
-
-# Start backup
-curl http://localhost:8888/start
-
-# Pause backup
-curl http://localhost:8888/pause
-
-# Stop backup
-curl http://localhost:8888/stop
-```
-
 ## Important Notes
 
-- The system processes directories sequentially, not in parallel
-- Progress is tracked by parsing rsync's output for percentage completion
-- The dashboard polls for updates every second
-- Backup state persists across server restarts via backup_status.json
-- Signal handling (SIGINT) ensures clean shutdown of rsync processes
-- **Mount verification**: Both scripts now check if the USB drive is properly mounted at `/mnt/chromeos/removable/PNYRP60PSSD` before starting backups
+- The system processes directories in parallel with multiple workers
+- Dynamic worker scaling based on CPU cores and available memory
+- Real-time progress tracking via rsync output parsing and WebSocket updates
+- State persists across server restarts via SQLite database
+- Graceful shutdown handling ensures clean termination of all workers
+- **Mount verification**: Automatic checking if USB drive is properly mounted at `/mnt/chromeos/removable/PNYRP60PSSD` before starting backups
   - Verifies the path exists and is an actual mount point
   - Prevents accidental backups to local filesystem
-  - Logs errors to backup_status.json if drive is not mounted
+  - Logs errors if drive is not mounted
+
+## TODO
+
+- Implement actual backend functionality for:
+  - Logs collection and filtering
+  - Profile management and persistence
+  - Directory selection API
+  - Dry run mode
+  - Schedule management
+- Add frontend UI integration for above features
+- Implement disk space monitoring
+- Add backup history tracking
+- Test rsync integration with real backup operations
+- Add progress persistence across restarts
+- Implement worker pool management UI

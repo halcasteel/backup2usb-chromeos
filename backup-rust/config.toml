@@ -1,0 +1,41 @@
+# Backup System Configuration
+
+# Server settings
+port = 8888
+host = "0.0.0.0"
+
+# Database
+database_url = "sqlite://backup.db"
+
+# Backup settings
+backup_dest = "/mnt/chromeos/removable/PNYRP60PSSD/pixelbook_backup"
+home_dir = "/home/halcasteel"
+
+# Worker settings
+max_workers = 4
+min_workers = 1
+
+# Rsync excludes
+rsync_excludes = [
+    "venv",
+    "node_modules",
+    "__pycache__",
+    ".git/objects",
+    "dist",
+    "build",
+    ".cache",
+    "*.log",
+    "*.tmp",
+    "*.temp",
+    "target",  # Rust build directory
+    ".cargo",
+    "backup_env",
+]
+
+# Resource limits
+max_memory_mb = 2048
+max_cpu_percent = 75.0
+
+# Logging
+log_level = "info"
+log_file = "backup-system.log"

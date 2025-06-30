@@ -1,0 +1,29 @@
+{
+  "instances": {
+    "instance_1": {
+      "id": "dashboard_improvements", 
+      "working_on": [
+        "BACKUP-OPS-DASHBOARD-V2.html:updateUI",
+        "multiprocess_backup.py:new_module"
+      ],
+      "tasks_completed": [
+        "✅ Add last completed directory tracking",
+        "✅ Show current file being copied", 
+        "✅ Display next directory in queue",
+        "✅ Fix file count display"
+      ],
+      "tasks_remaining": [
+        "🔄 Implement multi-process backup module",
+        "⚠️ Integration with main backup_server.py (coordinate with other instance)"
+      ],
+      "last_update": "2024-06-27T21:45:00",
+      "files_modified": [
+        "BACKUP-OPS-DASHBOARD-V2.html",
+        "multiprocess_backup.py (new)",
+        "claude_coordination.json"
+      ]
+    }
+  },
+  "conflicts": [],
+  "notes": "Other instance working on backup_server.py logging. Avoid editing that file directly."
+}
